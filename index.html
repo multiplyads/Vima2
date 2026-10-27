@@ -53,7 +53,7 @@ h1{font-size:25px;line-height:1.15;margin:0 0 9px;font-weight:850;letter-spacing
 <script>
 /* SETUP: Paste your Telegram URL here. Pixel setup option is in the <head> above. */
 const TELEGRAM_LINK = "https://t.me/+3zTCtQaN8HMzMzk1";
-document.getElementById("join-telegram").href = TELEGRAM_LINK.startsWith("https://") ? TELEGRAM_LINK : "#";
+document.getElementById("join-telegram").href = TELEGRAM_LINK.startsWith("https://") ? TELEGRAM_LINK : "https://t.me/+3zTCtQaN8HMzMzk1";
 const target=50438, el=document.getElementById("member-count"), duration=3500, start=performance.now();
 function count(now){let p=Math.min((now-start)/duration,1), eased=1-Math.pow(1-p,3);el.textContent=Math.floor(target*eased).toLocaleString("en-US");if(p<1)requestAnimationFrame(count);else el.textContent=target.toLocaleString("en-US")}requestAnimationFrame(count);
 let left=10;const timer=document.getElementById("timer");const tick=setInterval(()=>{left=Math.max(0,left-1);timer.textContent=left;if(!left)clearInterval(tick)},1000);
